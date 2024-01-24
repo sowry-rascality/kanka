@@ -4,6 +4,7 @@ namespace App\View\Components\Sidebar;
 
 use Closure;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Str;
 use Illuminate\View\Component;
 
 class Element extends Component
