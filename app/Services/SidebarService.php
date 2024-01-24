@@ -468,7 +468,7 @@ class SidebarService
     public function layout(): array
     {
         $key = $this->cacheKey();
-        if (!$this->withDisabled && Cache::has($key)) {
+        if (!$this->withDisabled && Cache::has($key) && false) {
             return Cache::get($key);
         }
         $layout = [];
