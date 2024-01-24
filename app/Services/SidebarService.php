@@ -505,6 +505,7 @@ class SidebarService
                         continue;
                     }
                 }
+
                 $layout[$name] = $element;
                 continue;
             }
@@ -698,6 +699,8 @@ class SidebarService
         if (!$this->campaign->boosted()) {
             if (!isset($element['label_key'])) {
                 dd('No label_key in customElement for ' . $key);
+            } else {
+                dd('Found label_key found for customElement with ' . $element['label_key']);
             }
             return $element;
         }
@@ -726,6 +729,8 @@ class SidebarService
 
         if (!isset($element['label_key'])) {
             dd('No label_key found for customElement with ' . $key);
+        } else {
+            dd('Found label_key found for customElement with ' . $element['label_key']);
         }
 
         return $element;
