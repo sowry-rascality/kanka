@@ -34,7 +34,7 @@
                                 $route = \Illuminate\Support\Str::beforeLast($route, '.') . '.' . $defaultIndex;
                             }
                             if (!isset($element['label_key'])) {
-                                $element['label_key'] = $name;
+                                dd('E601 - cant find label_key ' . $name);
                             }
                             @endphp
                             <x-sidebar.element
