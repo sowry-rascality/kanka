@@ -542,7 +542,7 @@ class SidebarService
             Cache::put($key, $layout, 7 * 86400);
         }
 
-        $element = $layout['dashboard']
+        $element = $layout['dashboard'];
         if (!isset($element['label_key'])) {
             dd('No label_key in customElement for dashboard');
         } else {
