@@ -25,7 +25,7 @@ class Element extends Component
         $this->text = $text;
         $this->icon = $icon;
         $this->url = $url;
-        $this->class = $class;
+        $this->class = Str::replace('fa-duotone', 'fa-solid', $class);;
     }
 
     /**

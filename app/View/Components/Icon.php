@@ -76,9 +76,9 @@ class Icon extends Component
     protected function mapEntity(string $entity): string
     {
         $class = config('entities.icons.' . $entity);
-        if (config('fontawesome.kit')) {
-            return $class;
-        }
+//         if (config('fontawesome.kit')) {
+//             return $class;
+//         }
         return Str::replace('fa-duotone', 'fa-solid', $class);
     }
 }
