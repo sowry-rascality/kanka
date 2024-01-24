@@ -35,7 +35,7 @@
         </a>
     @else
         <a class="btn2" href="{{ route($name . '.' . $route, [$campaign, 'm' => 'grid']) }}" data-toggle="tooltip" data-title="{{ __('datagrids.modes.grid') }}">
-            <i class="fa-solid fa-grid !mr-0" aria-hidden="true"></i>
+            <i class="fa-solid fa-grip-vertical !mr-0" aria-hidden="true"></i>
             <span class="sr-only">Grid</span>
         </a>
     @endif

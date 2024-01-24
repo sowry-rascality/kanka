@@ -136,7 +136,7 @@ $highlightClass = 'shadow-xs border-accent border-solid border-2 border-blue-500
             <div class="{{ $boxClass }} {{ $highlight === 'explore' ? $highlightClass : '' }}">
                 <div class="flex gap-2">
                     <h2 class="text-base grow">
-                        <x-icon class="fa-solid fa-grid"></x-icon>
+                        <x-icon class="fa-solid fa-grip-vertical"></x-icon>
                         {{ __('settings/appearance.fields.entity-explore') }}
                     </h2>
                     <a href="https://docs.kanka.io/en/latest/account/appearance.html#entity-explore" target="_blank" class="flex-0" title="{{ __('settings/appearance.actions.learn-more') }}">
