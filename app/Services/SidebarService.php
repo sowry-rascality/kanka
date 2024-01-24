@@ -542,13 +542,6 @@ class SidebarService
             Cache::put($key, $layout, 7 * 86400);
         }
 
-        $element = $layout['dashboard'];
-        if (!isset($element['label_key'])) {
-            dd('No label_key in customElement for dashboard');
-        } else {
-            dd('Found label_key found for customElement with ' . $element['label_key']);
-        }
-
         return $layout;
     }
 
@@ -705,11 +698,6 @@ class SidebarService
         unset($element['label']);
 
         if (!$this->campaign->boosted()) {
-            if (!isset($element['label_key'])) {
-                dd('No label_key in customElement for ' . $key);
-            } else {
-                dd('Found label_key found for customElement with ' . $element['label_key']);
-            }
             return $element;
         }
 
@@ -733,12 +721,6 @@ class SidebarService
         }
         if (!empty($icon)) {
             $element['custom_icon'] = $icon;
-        }
-
-        if (!isset($element['label_key'])) {
-            dd('No label_key found for customElement with ' . $key);
-        } else {
-            dd('Found label_key found for customElement with ' . $element['label_key']);
         }
 
         return $element;
