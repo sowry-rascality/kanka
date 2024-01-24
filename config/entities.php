@@ -78,8 +78,8 @@ return [
 
     'icons' => [
         'character' => 'fa-solid fa-user',
-        'family' => 'fa-solid fa-people-roof',
-        'location' => 'fa-solid fa-circle-location-arrow',
+        'family' => 'fa-solid fa-users',
+        'location' => 'fa-solid fa-location-arrow',
         'organisation' => 'fa-solid fa-sitemap',
         'item' => 'fa-solid fa-gem',
         'note' => 'fa-solid fa-book-open',
@@ -96,6 +96,6 @@ return [
         'map' => 'fa-solid fa-map',
         'timeline' => 'fa-solid fa-timeline',
         'bookmark' => 'fa-solid fa-bookmark',
-        'creature' => 'fa-solid fa-deer',
+        'creature' => 'fa-solid fa-dragon',
     ]
 ];
