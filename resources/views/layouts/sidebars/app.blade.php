@@ -33,6 +33,9 @@
                             if (isset($element['tree'])) {
                                 $route = \Illuminate\Support\Str::beforeLast($route, '.') . '.' . $defaultIndex;
                             }
+                            if (!isset($element['label_key'])) {
+                                $element['label_key'] = $element['name'];
+                            }
                             @endphp
                             <x-sidebar.element
                                 :url="route($route, (\Illuminate\Support\Arr::get($element, 'mode') === true ? $defaultOptions : [$campaign]))"
