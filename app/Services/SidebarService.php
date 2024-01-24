@@ -177,7 +177,7 @@ class SidebarService
     {
         $this->elements = [
             'dashboard' => [
-                'icon' => 'fa-duotone fa-house',
+                'icon' => 'fa-solid fa-house',
                 'label' => 'sidebar.dashboard',
                 'module' => false,
                 'route' => 'dashboard',
@@ -189,7 +189,7 @@ class SidebarService
                 'fixed' => true,
             ],
             'world' => [
-                'icon' => 'fa-duotone fa-mountains',
+                'icon' => 'fa-solid fa-mountains',
                 'label' => 'sidebar.world',
                 'module' => false,
                 'fixed' => true,
@@ -258,7 +258,7 @@ class SidebarService
                 'type_id' => config('entities.ids.creature')
             ],
             'game' => [
-                'icon' => 'fa-duotone fa-book',
+                'icon' => 'fa-solid fa-book',
                 'label' => 'sidebar.game',
                 'route' => false,
                 'fixed' => true,
@@ -306,14 +306,14 @@ class SidebarService
                 'type_id' => config('entities.ids.note')
             ],
             'other' => [
-                'icon' => 'fa-duotone fa-database',
+                'icon' => 'fa-solid fa-database',
                 'label' => 'sidebar.other',
                 'module' => false,
                 'route' => false,
                 'fixed' => true,
             ],
             'time' => [
-                'icon' => 'fa-duotone fa-hourglass',
+                'icon' => 'fa-solid fa-hourglass',
                 'label' => 'sidebar.time',
                 'module' => false,
                 'route' => false,
@@ -335,13 +335,13 @@ class SidebarService
                 'label' => 'entities.dice_rolls',
             ],
             'relations' => [
-                'icon' => 'fa-duotone fa-link',
+                'icon' => 'fa-solid fa-link',
                 'label' => 'sidebar.relations',
                 'perm' => 'relations',
                 'module' => false,
             ],
             'gallery' => [
-                'icon' => 'fa-duotone fa-images',
+                'icon' => 'fa-solid fa-images',
                 'label' => 'sidebar.gallery',
                 'route' => 'campaign.gallery.index',
                 'perm' => 'gallery',
@@ -352,7 +352,7 @@ class SidebarService
                 'label' => 'entities.attribute_templates',
             ],
             'settings' => [
-                'icon' => 'fa-duotone fa-cog',
+                'icon' => 'fa-solid fa-cog',
                 'label' => 'sidebar.settings',
                 'module' => false,
                 'fixed' => true,
@@ -365,7 +365,7 @@ class SidebarService
             'route' => 'search',
         ],*/
             'history' => [
-                'icon' => 'fa-duotone fa-clock-rotate-left',
+                'icon' => 'fa-solid fa-clock-rotate-left',
                 'label' => 'sidebar.recent',
                 'perm' => 'recover',
                 'module' => false,
