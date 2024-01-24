@@ -34,10 +34,9 @@
                                 $route = \Illuminate\Support\Str::beforeLast($route, '.') . '.' . $defaultIndex;
                             }
                             if (!isset($element['label_key'])) {
-                                $element['label_key'] = 'Unknown';
+                                $element['label_key'] = $name;
                             }
                             @endphp
-                            <?=$element?>
                             <x-sidebar.element
                                 :url="route($route, (\Illuminate\Support\Arr::get($element, 'mode') === true ? $defaultOptions : [$campaign]))"
                                 :icon="$element['custom_icon'] ?? $element['icon']"
