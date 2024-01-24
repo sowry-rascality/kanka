@@ -696,7 +696,7 @@ class SidebarService
         unset($element['label']);
 
         if (!$this->campaign->boosted()) {
-            if (!isset($element['label_key']) {
+            if (!isset($element['label_key'])) {
                 dd('No label_key in customElement for ' . $key);
             }
             return $element;
@@ -724,7 +724,7 @@ class SidebarService
             $element['custom_icon'] = $icon;
         }
 
-        if (!isset($element['label_key']) {
+        if (!isset($element['label_key'])) {
             dd('No label_key found for customElement with ' . $key);
         }
 
