@@ -15,7 +15,7 @@
             <li class="px-2 section-overview {{ $sidebar->activeCampaign('overview') }}">
                 <x-sidebar.element
                     :url="route('overview', [$campaign])"
-                    icon="fa-solid fa-block"
+                    icon="fa-solid fa-cube"
                     :text="__('crud.tabs.overview')"
                 ></x-sidebar.element>
 
@@ -25,7 +25,7 @@
                         <li class="px-2 section-overview {{ $sidebar->activeCampaign('recovery') }}">
                             <x-sidebar.element
                                 :url="route('recovery', [$campaign])"
-                                icon="fa-solid fa-trash-undo"
+                                icon="fa-solid fa-trash-can-arrow-up"
                                 :text="__('campaigns.show.tabs.recovery')"
                             ></x-sidebar.element>
                         </li>
@@ -42,7 +42,7 @@
             @if (auth()->check() && (auth()->user()->can('members', $campaign) || auth()->user()->can('submissions', $campaign) || auth()->user()->can('roles', $campaign)))
             <li class="px-2 section-management">
                 <x-sidebar.element
-                    icon="fa-solid fa-person-sign"
+                    icon="fa-solid fa-person-harassing"
                     :text="__('campaigns.show.tabs.management')"
                 ></x-sidebar.element>
 
@@ -60,7 +60,7 @@
                     <li class="px-2 section-roles {{ $sidebar->activeCampaign('campaign_roles') }}">
                         <x-sidebar.element
                             :url="route('campaign_roles.index', [$campaign])"
-                            icon="fa-solid fa-screen-users"
+                            icon="fa-solid fa-display"
                             :text="__('campaigns.show.tabs.roles')"
                         ></x-sidebar.element>
                     </li>
