@@ -42,7 +42,7 @@
             @if (auth()->check() && (auth()->user()->can('members', $campaign) || auth()->user()->can('submissions', $campaign) || auth()->user()->can('roles', $campaign)))
             <li class="px-2 section-management">
                 <x-sidebar.element
-                    icon="fa-solid fa-person-harassing"
+                    icon="fa-solid fa-user-check"
                     :text="__('campaigns.show.tabs.management')"
                 ></x-sidebar.element>
 
@@ -60,7 +60,7 @@
                     <li class="px-2 section-roles {{ $sidebar->activeCampaign('campaign_roles') }}">
                         <x-sidebar.element
                             :url="route('campaign_roles.index', [$campaign])"
-                            icon="fa-solid fa-display"
+                            icon="fa-solid fa-tv"
                             :text="__('campaigns.show.tabs.roles')"
                         ></x-sidebar.element>
                     </li>
