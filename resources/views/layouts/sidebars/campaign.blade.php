@@ -8,14 +8,14 @@
             <li class="px-2 section-dashboard">
                 <x-sidebar.element
                     :url="route('dashboard', [$campaign])"
-                    icon="fa-duotone fa-house"
+                    icon="fa-solid fa-house"
                     :text="__('sidebar.dashboard')"
                 ></x-sidebar.element>
             </li>
             <li class="px-2 section-overview {{ $sidebar->activeCampaign('overview') }}">
                 <x-sidebar.element
                     :url="route('overview', [$campaign])"
-                    icon="fa-duotone fa-block"
+                    icon="fa-solid fa-block"
                     :text="__('crud.tabs.overview')"
                 ></x-sidebar.element>
 
@@ -25,7 +25,7 @@
                         <li class="px-2 section-overview {{ $sidebar->activeCampaign('recovery') }}">
                             <x-sidebar.element
                                 :url="route('recovery', [$campaign])"
-                                icon="fa-duotone fa-trash-undo"
+                                icon="fa-solid fa-trash-undo"
                                 :text="__('campaigns.show.tabs.recovery')"
                             ></x-sidebar.element>
                         </li>
@@ -33,7 +33,7 @@
                     <li class="px-2 section-overview {{ $sidebar->activeCampaign('achievements') }}">
                         <x-sidebar.element
                             :url="route('stats', [$campaign])"
-                            icon="fa-duotone fa-bars-progress"
+                            icon="fa-solid fa-bars-progress"
                             :text="__('campaigns.show.tabs.achievements')"
                         ></x-sidebar.element>
                     </li>
@@ -42,7 +42,7 @@
             @if (auth()->check() && (auth()->user()->can('members', $campaign) || auth()->user()->can('submissions', $campaign) || auth()->user()->can('roles', $campaign)))
             <li class="px-2 section-management">
                 <x-sidebar.element
-                    icon="fa-duotone fa-person-sign"
+                    icon="fa-solid fa-person-sign"
                     :text="__('campaigns.show.tabs.management')"
                 ></x-sidebar.element>
 
@@ -51,7 +51,7 @@
                 <li class="px-2 section-members {{ $sidebar->activeCampaign('campaign_users') }}">
                     <x-sidebar.element
                         :url="route('campaign_users.index', [$campaign])"
-                        icon="fa-duotone fa-users"
+                        icon="fa-solid fa-users"
                         :text="__('campaigns.show.tabs.members')"
                     ></x-sidebar.element>
                 </li>
@@ -60,7 +60,7 @@
                     <li class="px-2 section-roles {{ $sidebar->activeCampaign('campaign_roles') }}">
                         <x-sidebar.element
                             :url="route('campaign_roles.index', [$campaign])"
-                            icon="fa-duotone fa-screen-users"
+                            icon="fa-solid fa-screen-users"
                             :text="__('campaigns.show.tabs.roles')"
                         ></x-sidebar.element>
                     </li>
@@ -69,7 +69,7 @@
                     <li class="px-2 section-submissions {{ $sidebar->activeCampaign('campaign_submissions') }}">
                         <x-sidebar.element
                             :url="route('campaign_submissions.index', [$campaign])"
-                            icon="fa-duotone fa-arrow-right-to-bracket"
+                            icon="fa-solid fa-arrow-right-to-bracket"
                             :text="__('campaigns.show.tabs.applications')"
                         ></x-sidebar.element>
                     </li>
@@ -80,7 +80,7 @@
 
             <li class="px-2 section-customisation">
                 <x-sidebar.element
-                    icon="fa-duotone fa-cog"
+                    icon="fa-solid fa-cog"
                     :text="__('campaigns.show.tabs.customisation')"
                 ></x-sidebar.element>
                 <ul class="sidebar-submenu list-none p-0 pl-4 m-0">
@@ -88,7 +88,7 @@
                     <li class="px-2 section-modules {{ $sidebar->activeCampaign('modules') }}">
                         <x-sidebar.element
                             :url="route('campaign.modules', [$campaign])"
-                            icon="fa-duotone fa-floppy-disks"
+                            icon="fa-solid fa-floppy-disks"
                             :text="__('campaigns.show.tabs.modules')"
                         ></x-sidebar.element>
                     </li>
@@ -96,7 +96,7 @@
                         <li class="px-2 section-modules {{ $sidebar->activeCampaign('plugins') }}">
                             <x-sidebar.element
                                 :url="route('campaign_plugins.index', [$campaign])"
-                                icon="fa-duotone fa-shop"
+                                icon="fa-solid fa-shop"
                                 :text="__('campaigns.show.tabs.plugins')"
                             ></x-sidebar.element>
                         </li>
@@ -104,7 +104,7 @@
                     <li class="px-2 section-modules {{ $sidebar->activeCampaign('default-images') }}">
                         <x-sidebar.element
                             :url="route('campaign.default-images', [$campaign])"
-                            icon="fa-duotone fa-image"
+                            icon="fa-solid fa-image"
                             :text="__('campaigns.show.tabs.default-images')"
                         ></x-sidebar.element>
                     </li>
@@ -113,14 +113,14 @@
                     <li class="px-2 section-modules {{ $sidebar->activeCampaign('campaign_styles') }}">
                         <x-sidebar.element
                             :url="route('campaign_styles.index', [$campaign])"
-                            icon="fa-duotone fa-palette"
+                            icon="fa-solid fa-palette"
                             :text="__('campaigns.show.tabs.styles')"
                         ></x-sidebar.element>
                     </li>
                         <li class="px-2 section-modules {{ $sidebar->activeCampaign('sidebar-setup') }}">
                             <x-sidebar.element
                                 :url="route('campaign-sidebar', [$campaign])"
-                                icon="fa-duotone fa-bars-staggered"
+                                icon="fa-solid fa-bars-staggered"
                                 :text="__('campaigns.show.tabs.sidebar')"
                             ></x-sidebar.element>
                         </li>
@@ -132,21 +132,21 @@
             @can('update', $campaign)
             <li class="px-2 section-management">
                 <x-sidebar.element
-                    icon="fa-duotone fa-database"
+                    icon="fa-solid fa-database"
                     :text="__('campaigns.show.tabs.data')"
                 ></x-sidebar.element>
                 <ul class="sidebar-submenu list-none p-0 pl-4 m-0">
                     <li class="px-2 section-overview {{ $sidebar->activeCampaign('campaign-export') }}">
                         <x-sidebar.element
                             :url="route('campaign.export', [$campaign])"
-                            icon="fa-duotone fa-download"
+                            icon="fa-solid fa-download"
                             :text="__('campaigns.show.tabs.export')"
                         ></x-sidebar.element>
                     </li>
                     <li class="px-2 section-overview {{ $sidebar->activeCampaign('campaign-import') }}">
                         <x-sidebar.element
                             :url="route('campaign.import', [$campaign])"
-                            icon="fa-duotone fa-upload"
+                            icon="fa-solid fa-upload"
                             :text="__('campaigns.show.tabs.import')"
                         ></x-sidebar.element>
                     </li>
