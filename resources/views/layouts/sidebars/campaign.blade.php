@@ -88,7 +88,7 @@
                     <li class="px-2 section-modules {{ $sidebar->activeCampaign('modules') }}">
                         <x-sidebar.element
                             :url="route('campaign.modules', [$campaign])"
-                            icon="fa-solid fa-floppy-disks"
+                            icon="fa-solid fa-save"
                             :text="__('campaigns.show.tabs.modules')"
                         ></x-sidebar.element>
                     </li>
